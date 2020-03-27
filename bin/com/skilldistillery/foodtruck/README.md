@@ -1,2 +1,0 @@
-##FoodTruck App
-
