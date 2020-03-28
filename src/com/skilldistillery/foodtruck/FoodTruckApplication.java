@@ -11,7 +11,7 @@ public class FoodTruckApplication {
 
 	}
 
-	FoodTruck[] foodTrucks = new FoodTruck[5];
+	FoodTruck[] foodTrucks = new FoodTruck[3];
 	int highestRate = 0;
 
 	// Run() run method
@@ -79,7 +79,7 @@ public class FoodTruckApplication {
 			if (foodTruck != null) {
 				System.out.println(foodTruck + ": FOOD TRUCK CURRENTLY VISITED");
 			}
-			System.out.println("Hmm, let me check my list of food trucks for tonight. ");
+			System.out.println("------------------------------------------------ ");
 		}
 	}
 
@@ -95,7 +95,8 @@ public class FoodTruckApplication {
 			sum = sum + currentTruckRating;
 		}
 		average = sum / avarageRating;
-		System.out.println("Average rating of food truck line-up: " + average);
+		System.out.println("Average rating of food truck line-up: ");
+		System.out.printf("%.2f", average);
 		System.out.println();
 	}
 
@@ -108,7 +109,7 @@ public class FoodTruckApplication {
 				highestRate = foodTrucks[bestRating].getRating();
 			}
 			if (highestRate == foodTrucks[bestRating].getRating()) {
-				System.out.println("The Highest Rated Food Truck is: " + foodTrucks[bestRating].toString());
+				System.out.println("The Highest Rated Food Truck: " + foodTrucks[bestRating].toString());
 			}
 		}
 	}
