@@ -11,7 +11,7 @@ public class FoodTruckApplication {
 
 	}
 
-	FoodTruck[] foodTrucks = new FoodTruck[3];
+	FoodTruck[] foodTrucks = new FoodTruck[5];
 	int highestRate = 0;
 
 	// Run() run method
@@ -26,11 +26,11 @@ public class FoodTruckApplication {
 			if (truckName.equalsIgnoreCase("q") || (truckName.equalsIgnoreCase("Quit"))) {
 				break;
 			}
-			System.out.println("Enter Food Type: ");
+			System.out.println("Enter Food Type:\n (Enter one word: American, Mexican, Sushi, Italian, Vietnamese, Candy, Sweets, Delicious) ");
 			String foodType = sc.next();
 
 			System.out.println(
-					"Food truck " + (i + 1) + " :How Would You Rate Your Experience (1 for worse to 5 for Best) ");
+					"Food truck " + (i + 1) + ": How Would You Rate Your Experience (1 for worse to 5 for Best) ");
 			int rating = sc.nextInt();
 
 			FoodTruck truck = new FoodTruck(truckName, foodType, rating, rating);
@@ -52,7 +52,7 @@ public class FoodTruckApplication {
 				listHighestRating();
 				break;
 			case 4:
-				System.out.println("Check us out on www.roaminghunger.com for our next event. ");
+				System.out.println("Check us out on www.roaminghunger.com for our next event in Denver, CO. ");
 				break;
 			default:
 				System.out.println("Invalid Menu Choice");
@@ -64,14 +64,19 @@ public class FoodTruckApplication {
 	}
 
 	public void menu() {
-		System.out.println("/////////////// Mile High City ////////////////");
-		System.out.println("///////////// Food Truck Event ////////////////");
-		System.out.println("///////////////// MENU ////////////////////////");
-		System.out.println("1: Press 1 for List of Food Truck at Event    /");
-		System.out.println("2: Press 2 for Food Truck Rating Average      /");
-		System.out.println("3: Press 3 for Highest Rated Food Truck       /");
-		System.out.println("4: Press 4 to Quit Program                    /");
-		System.out.println("////////Mile High City Food Truck Event////////");
+		System.out.println("|////////////////// Mile High City ///////////////////|");
+		System.out.println("|///////////////// Food Truck Event //////////////////|");
+		System.out.println("|////////////////////// MENU /////////////////////////|");
+		System.out.println("|                                                     |");
+		System.out.println("| 1:        Press 1 for List of Food Truck at Event   |");
+		System.out.println("|                                                     |");
+		System.out.println("| 2:        Press 2 for Food Truck Rating Average     |");
+		System.out.println("|                                                     |");
+		System.out.println("| 3:        Press 3 for Highest Rated Food Truck      |");
+		System.out.println("|                                                     |");
+		System.out.println("| 4:        Press 4 to Quit Program                   |");
+		System.out.println("|                                                     |");
+		System.out.println("|///////////Mile High City Food Truck Event///////////|");
 	}
 
 	public void listAvailableFoodTrucks() {
@@ -95,7 +100,7 @@ public class FoodTruckApplication {
 			sum = sum + currentTruckRating;
 		}
 		average = sum / avarageRating;
-		System.out.println("Average rating of food truck line-up: ");
+		System.out.println("\tAverage rating of food truck line-up: ");
 		System.out.printf("%.2f", average);
 		System.out.println();
 	}
