@@ -84,7 +84,7 @@ public class FoodTruckApplication {
 			if (foodTruck != null) {
 				System.out.println(foodTruck + ": FOOD TRUCK CURRENTLY VISITED");
 			}
-			System.out.println("------------------------------------------------ ");
+			System.out.println("|------------------------------------------------| ");
 		}
 	}
 
